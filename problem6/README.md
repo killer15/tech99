@@ -49,18 +49,18 @@ This module is part of the backend service that supports a live-updating scorebo
   • 500 Internal Server Error: An error occurred on the server.
 
 ## Notes
-  • User Information: User id will be stored in JWT token
-  • Action Token Validation: Each score update requires a valid token in header to prevent unauthorized updates.
-  • Rate Limiting: Limits the frequency of score updates to prevent abuse.
-  • Logging and Monitoring: All score update attempts are logged for monitoring and auditing purposes.
-  • Caching: Implement caching strategies to improve response time for frequent scoreboard requests
+  - User Information: User id will be stored in JWT token
+  - Action Token Validation: Each score update requires a valid token in header to prevent unauthorized updates.
+  - Rate Limiting: Limits the frequency of score updates to prevent abuse.
+  - Logging and Monitoring: All score update attempts are logged for monitoring and auditing purposes.
+  - Caching: Implement caching strategies to improve response time for frequent scoreboard requests
     - Using Redis SortedSet to increase and store score of user (ZINCRBY to increase, ZRANGE to get top 10)
     - Do not set expired time
-  • Using MongoDb
+  - Using MongoDb
     - Store data
     - Store audit log
     - Create a view to get top 10 users score
 
 ## Improvements
-  • WebSocket Integration: Consider using WebSockets for pushing real-time updates to the frontend.
-  • Scalability: Consider designing the system to handle a large number of simultaneous users, especially during peak times (example: multiple servers/services handle api requests or websocket)
+  -  WebSocket Integration: Consider using WebSockets for pushing real-time updates to the frontend.
+  -  Scalability: Consider designing the system to handle a large number of simultaneous users, especially during peak times (example: multiple servers/services handle api requests or websocket)
