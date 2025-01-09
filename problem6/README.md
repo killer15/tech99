@@ -18,15 +18,15 @@ This module is part of the backend service that supports a live-updating scorebo
     "Authorization": "Bearer token"
   ```
 - **Response**:
-  • 200 OK: Score updated successfully
+  - 200 OK: Score updated successfully
   ```json
   {
     "message": "Score updated successfully"
   }
   ```
-  • 400 Bad Request: Invalid request data.
-  • 401 Unauthorized: Unauthorized score update attempt.
-  • 500 Internal Server Error: An error occurred on the server.
+  - 400 Bad Request: Invalid request data.
+  - 401 Unauthorized: Unauthorized score update attempt.
+  - 500 Internal Server Error: An error occurred on the server.
 
 ### 2.`GET /api/scoreboard`
 
@@ -36,7 +36,7 @@ This module is part of the backend service that supports a live-updating scorebo
     "Authorization": "Bearer token"
   ```
 - **Response**:
-  • 200 OK: Returns the top 10 users
+  - 200 OK: Returns the top 10 users
   ```json
     [
       { "userId": "user1", "score": 250 },
@@ -44,9 +44,9 @@ This module is part of the backend service that supports a live-updating scorebo
       ...
     ]
   ```
-  • 400 Bad Request: Invalid request data.
-  • 401 Unauthorized: Unauthorized score update attempt.
-  • 500 Internal Server Error: An error occurred on the server.
+  - 400 Bad Request: Invalid request data.
+  - 401 Unauthorized: Unauthorized score update attempt.
+  - 500 Internal Server Error: An error occurred on the server.
 
 ## Notes
   - User Information: User id will be stored in JWT token
